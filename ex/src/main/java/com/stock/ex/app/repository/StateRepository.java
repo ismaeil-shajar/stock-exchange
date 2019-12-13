@@ -1,7 +1,13 @@
 package com.stock.ex.app.repository;
 
-import com.stock.ex.app.model.City;
+
+import com.stock.ex.app.model.State;
 import org.springframework.data.jpa.repository.JpaRepository;
 
-public interface StateRepository extends JpaRepository<City,Integer> {
+import java.util.Optional;
+import java.util.UUID;
+
+public interface StateRepository extends JpaRepository<State,Integer> {
+
+    Optional<State> findById(UUID id);
 }
