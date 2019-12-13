@@ -8,7 +8,7 @@ public class UserCard {
 
 //    @ManyToOne(fetch = FetchType.LAZY)
 //    @JoinColumn(name="user_id")
-//    private Users user;
+//    private User user;
 
     private long startTime;
     private long endTime;

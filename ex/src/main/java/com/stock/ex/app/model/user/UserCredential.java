@@ -14,7 +14,7 @@ public class UserCredential {
 
 //    @Id
 //    @OneToOne(mappedBy = "user_credential")
-//    private Users user;
+//    private User user;
 //
 //    private String password;
 

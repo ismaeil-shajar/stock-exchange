@@ -1,4 +1,4 @@
-package com.stock.ex.admin.controller;
+package com.stock.ex.admin.auth.controller;
 
 import com.stock.ex.admin.services.UserTypeService;
 import com.stock.ex.app.model.user.UserType;

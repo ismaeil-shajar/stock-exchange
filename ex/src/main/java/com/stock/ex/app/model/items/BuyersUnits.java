@@ -12,7 +12,7 @@ public class BuyersUnits {
 //    @ManyToOne(fetch = FetchType.LAZY, optional = false)
 //    @JoinColumn(name = "user_id", nullable = false)
 //    @OnDelete(action = OnDeleteAction.CASCADE)
-//    private Users user;
+//    private User user;
 //
 //
 //    private long startTime;
