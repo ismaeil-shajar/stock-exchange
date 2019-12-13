@@ -17,18 +17,17 @@ public class CropService {
     CropRepository CropRepository;
 
 
-    @GetMapping("/Crop")
     public List<Crop> getAllCities(){
         return CropRepository.findAll();
     }
 
-    @PostMapping("/Crop")
-    public Crop postCrop(@Valid @RequestBody Crop Crop){
+
+    public Crop postCrop(Crop Crop){
         return CropRepository.save(Crop);
     }
 
-    @PutMapping("/Crop/{Crop_id}")
-    public Crop updateCrop(@PathVariable UUID Crop_id, @Valid @RequestBody Crop CropRequest){
+
+    public Crop updateCrop( UUID Crop_id, Crop CropRequest){
 
         return CropRepository.findById(Crop_id).map(Crop -> {
             Crop.setName(CropRequest.getName());
@@ -38,11 +37,10 @@ public class CropService {
         }).orElseThrow(()-> new ResourceNotFoundException("CropId " + Crop_id + " not found"));
     }
 
-    @DeleteMapping("/Crop/{Crop_id}")
-    public ResponseEntity<?> deleteCrop(@PathVariable UUID Crop_id){
-        return CropRepository.findById(Crop_id).map(Crop -> {
+    public ResponseEntity<?> deleteCrop(UUID crop_id){
+        return CropRepository.findById(crop_id).map(Crop -> {
             CropRepository.delete(Crop);
             return ResponseEntity.ok().build();
-        }).orElseThrow(()-> new ResourceNotFoundException("CropId " + Crop_id + " not found"));
+        }).orElseThrow(()-> new ResourceNotFoundException("CropId " + crop_id + " not found"));
     }
 }
