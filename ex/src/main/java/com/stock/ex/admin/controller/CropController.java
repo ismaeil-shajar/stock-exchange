@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.UUID;
 
 @RestController
+@RequestMapping("/api")
 public class CropController {
 
     @Autowired
@@ -19,8 +20,8 @@ public class CropController {
 
 
     @GetMapping("/Crop")
-    public List<Crop> getAllCities(){
-        return cropService.getAllCities();
+    public List<Crop> getAllCrops(){
+        return cropService.getAllCrops();
     }
 
     @PostMapping("/Crop")

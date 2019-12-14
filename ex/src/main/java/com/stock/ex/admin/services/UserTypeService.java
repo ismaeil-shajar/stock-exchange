@@ -5,12 +5,15 @@ import com.stock.ex.app.model.user.UserType;
 import com.stock.ex.app.repository.UserTypeRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
+
+@Service
 public class UserTypeService {
 
     @Autowired
@@ -18,7 +21,7 @@ public class UserTypeService {
 
 
     @GetMapping("/userType")
-    public List<UserType> getAllCities(){
+    public List<UserType> getAllUserTypes(){
         return userTypeRepository.findAll();
     }
 

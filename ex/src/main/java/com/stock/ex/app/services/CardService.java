@@ -17,7 +17,7 @@ public class CardService {
 
 
     @GetMapping("/city")
-    public List<City> getAllCities(){
+    public List<City> getAllCards(){
         return cityRepository.findAll();
     }
 

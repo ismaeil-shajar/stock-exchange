@@ -5,12 +5,14 @@ import com.stock.ex.app.model.State;
 import com.stock.ex.app.repository.StateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.util.List;
 import java.util.UUID;
 
+@Service
 public class StateService {
 
     @Autowired
@@ -18,7 +20,7 @@ public class StateService {
 
 
     @GetMapping("/state")
-    public List<State> getAllCities(){
+    public List<State> getAllStates(){
         return stateRepository.findAll();
     }
 

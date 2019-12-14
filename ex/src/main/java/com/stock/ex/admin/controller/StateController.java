@@ -14,14 +14,15 @@ import java.util.UUID;
 
 
 @RestController
+@RequestMapping("/api")
 public class StateController {
 
     @Autowired
     StateService stateService;
 
     @GetMapping("/state")
-    public List<State> getAllCities(){
-        return stateService.getAllCities();
+    public List<State> getAllStates(){
+        return stateService.getAllStates();
     }
 
     @PostMapping("/state")
