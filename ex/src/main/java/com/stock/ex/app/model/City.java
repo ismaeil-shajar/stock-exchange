@@ -16,8 +16,9 @@ public class City {
     private UUID id;
 
     @ManyToOne(fetch = FetchType.LAZY, optional = false)
-    @JoinColumn(name = "state_id", nullable = false)
-    @OnDelete(action = OnDeleteAction.CASCADE)
+    @MapsId("state_id")
+//    @JoinColumn(name = "state_id", nullable = false)
+//    @OnDelete(action = OnDeleteAction.CASCADE)
     private State state;
 
     private String name;

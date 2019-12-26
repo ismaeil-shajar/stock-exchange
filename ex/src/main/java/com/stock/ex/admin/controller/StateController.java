@@ -1,9 +1,7 @@
 package com.stock.ex.admin.controller;
 
 import com.stock.ex.admin.services.StateService;
-import com.stock.ex.app.exception.ResourceNotFoundException;
 import com.stock.ex.app.model.State;
-import com.stock.ex.app.repository.StateRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -39,4 +37,5 @@ public class StateController {
     public ResponseEntity<?> deleteState(@PathVariable UUID state_id){
         return stateService.deleteState(state_id);
          }
+
 }
