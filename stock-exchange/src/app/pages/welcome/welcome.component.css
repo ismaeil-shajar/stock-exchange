@@ -1,0 +1,18 @@
+.home {
+background: url("../../../assets/imgs/crops.jpg");
+background-size: cover;
+}
+
+.inner-content {
+    padding: 10%;
+    
+    height: 100%;
+  }
+
+.table-tabs{
+    background: rgba(88, 185, 112, 0.561);
+}
+
+nz-layout:not(.home) {
+    margin: 24px;
+  }
